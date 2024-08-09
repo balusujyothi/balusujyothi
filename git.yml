@@ -1,0 +1,11 @@
+stages:
+  -develop
+  -test
+develop:
+  image: alpine
+  stage: develop
+  script: |
+    mkdir develop
+    ls
+    touch develoo
+    ls
