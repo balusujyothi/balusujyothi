@@ -1,1 +1,23 @@
-hiiicd 
+stages: 
+  -deploy
+  -test
+deploy:
+  image: alpine
+  stage: deploy  
+  script: |
+    mkdir deploy 
+    ls
+    touch deploy 
+    ls 
+test:
+  image: alpine
+  stage: test
+  script: |
+    mkdir test
+    ls
+    touch test
+    ls
+hello: &marks
+  -55
+  -88
+happy: *marks
